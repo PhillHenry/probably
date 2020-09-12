@@ -8,9 +8,11 @@ scalaVersion := "2.12.12"
 lazy val root = (project in file("."))
   .settings(
     libraryDependencies ++= Seq(
-      munit,
+      munit, figaro
     )
   )
+
+testFrameworks += new TestFramework("munit.Framework")
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
 
@@ -54,4 +56,5 @@ scalacOptions ++= Seq(
   "-Ybackend-parallelism", "8", // Enable paralellisation — change to desired number!
   "-Ycache-plugin-class-loader:last-modified", // Enables caching of classloaders for compiler plugins
   "-Ycache-macro-class-loader:last-modified", // and macro definitions. This can lead to performance improvements.
+  "-Yrangepos" // variable names in tests
 )

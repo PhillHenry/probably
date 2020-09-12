@@ -14,5 +14,6 @@ object Dependencies {
   val cats_free         = "org.typelevel" % s"cats-free_$scalaBinVersion" % cats_version
   val cats_core         = "org.typelevel" % s"cats-core_$scalaBinVersion" % cats_version
   val cats_effect       = "org.typelevel" % s"cats-effect_$scalaBinVersion" % cats_version
+  val figaro            = "com.cra.figaro" %% "figaro" % "5.0.0.0"
 
 }
