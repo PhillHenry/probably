@@ -58,3 +58,5 @@ scalacOptions ++= Seq(
   "-Ycache-macro-class-loader:last-modified", // and macro definitions. This can lead to performance improvements.
   "-Yrangepos" // variable names in tests
 )
+
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.0")
